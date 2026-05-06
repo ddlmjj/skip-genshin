@@ -1,0 +1,36 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "A app for skiping genshin dialogue",
+  "license": "ISC",
+  "author": "THEDDLM",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "dist": "electron-builder",
+    "start": "electron .",
+    "test": "node main.js"
+  },
+  "build": {
+  "appId": "com.theddlm.skipgenshin",
+  "productName": "SkipGenshin",
+  "directories": {
+    "output": "dist_electron"
+  },
+  "extraResources": [
+    {
+      "from": "resources/backend/",
+      "to": "backend/",
+      "filter": ["**/*"]
+    }
+  ],
+  "win": {
+    "requestedExecutionLevel": "requireAdministrator",
+    "target": "nsis" 
+  }
+},
+  "devDependencies": {
+    "electron": "^41.5.0",
+    "electron-builder": "^26.8.1"
+  }
+}

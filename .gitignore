@@ -1,0 +1,7 @@
+/python/venv/
+/python/build/
+/python/dist/
+/app/node_modules/
+/app/dist_electron/
+/app/resources/
+/app/package-lock.json
